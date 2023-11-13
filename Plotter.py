@@ -1,7 +1,8 @@
-# CSV stripping
 
 import csv
 import re
+import matplotlib.pyplot as plt
+import numpy as np
 
 def main():
 
@@ -24,19 +25,10 @@ def main():
 
         data.append(res)
 
-   # print(data)
+    yPlot = np.arange(1,13, 1)
 
-    newFile = open("ParsedData.csv", "w")
-    csvWriter = csv.writer(newFile)
-
-    csvWriter.writerow(data)
-    
-
-   
-
-
-
- 
+    plt.plot(yPlot,data)
+    plt.show()
 if __name__ == "__main__": # This function executes "main" when this file is run directly as a script, but prevents automatic execution when imported.
 
     main()
