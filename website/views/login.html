@@ -56,8 +56,10 @@
 
             if (validUsers[username] && validUsers[username] === password) {
                 alert("Login successful as " + username + "");
+                window.location.href = "/userPage";
             } else {
                 alert("Login failed");
+                window.location.href = "/login";
             }
         }
     </script>

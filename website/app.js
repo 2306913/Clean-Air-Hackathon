@@ -27,6 +27,13 @@ app.get('/login', (req, res) => { // login
 }
 );
 
+app.get('/userPage', (req, res) => { // login
+    res.sendFile('./views/userPage.html', { root: __dirname });
+    // out put to the console "ip address" "time" "request"
+    log(req, res);
+}
+);
+
 app.use((req, res) => { // 404 page
     res.status(404).sendFile('./views/404.html', { root: __dirname });
     log(req, res);
