@@ -20,7 +20,7 @@ app.get('/', (req, res) => { // root path
 }
 );
 
-app.get('/login', (req, res) => { // root path
+app.get('/login', (req, res) => { // login
     res.sendFile('./views/login.html', { root: __dirname });
     // out put to the console "ip address" "time" "request"
     log(req, res);
