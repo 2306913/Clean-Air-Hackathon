@@ -3,7 +3,10 @@ var path = require('path'); // import path
 
 const app = exspress(); // create express app
 
-app.use(exspress.static(path.join(__dirname, 'public'))); // set public folder as static folder for static file
+//make a static folder for css and js
+app.use(exspress.static(path.join(__dirname, 'public')));
+console.log(path.join(__dirname, 'public'));
+
  
 app.listen(3000)
 
