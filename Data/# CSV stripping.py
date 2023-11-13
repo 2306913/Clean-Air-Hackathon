@@ -15,7 +15,7 @@ def main():
 
     data = []
 
-    for x in range(8, len(header)):
+    for x in range(8, len(header), 2):
 
         res = header[x].split(" ")[0]
         res = res.replace("um", "")
@@ -24,7 +24,18 @@ def main():
 
         data.append(res)
 
-    print(data)
+   # print(data)
+
+    newFile = open("ParsedData.csv", "w")
+    csvWriter = csv.writer(newFile)
+
+    csvWriter.writerow(data)
+    
+
+   
+
+
+
  
 if __name__ == "__main__": # This function executes "main" when this file is run directly as a script, but prevents automatic execution when imported.
 
